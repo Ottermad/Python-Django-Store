@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="section shirts page">
+        <div class="wrapper">
+            <h1>Mike&rsquo;s Full Catalog of Shirts</h1>
+
+            <ul class="products">
+                {% for shirt in shirts %}<li><a href="{% url 'shirts:detail' pk=shirt.pk %}"><img src="{{ shirt.img.url }}"><p>View Details</p></a></li>{% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

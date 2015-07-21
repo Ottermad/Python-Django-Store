@@ -1,0 +1,4 @@
+Django==1.8.3
+Pillow==2.9.0
+sendgrid==1.4.0
+smtpapi==0.2.0

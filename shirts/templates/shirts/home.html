@@ -1,0 +1,32 @@
+ {% extends "layout.html" %}
+{% load static from staticfiles %}
+{% block body %}
+    <div class="section banner">
+
+			<div class="wrapper">
+
+				<img class="hero" src="{% static "img/mike-the-frog.png" %}" alt="Mike the Frog says:">
+				<div class="button">
+					<a href="{% url 'shirts:listing' %}">
+						<h2>Hey, I&rsquo;m Mike!</h2>
+						<p>Check Out My Shirts</p>
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="section shirts latest">
+
+			<div class="wrapper">
+
+				<h2>Mike&rsquo;s Latest Shirts</h2>
+
+				<ul class="products">
+                    {% for shirt in shirts %}<li><a href="{% url 'shirts:detail' pk=shirt.pk %}"><img src="{{ shirt.img.url }}" alt="{{ shirt.name }}"><p>View Details</p></a></li>{% endfor %}
+				</ul>
+
+			</div>
+
+		</div>
+{% endblock %}
