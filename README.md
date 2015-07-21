@@ -1,4 +1,4 @@
-# Python Flask Store
+# Python Django Store
 
 This project is based on the Build A Simple PHP Application from
 [Team Treehouse](http://teamtreehouse.com). It takes the simple PHP Application
